@@ -1,0 +1,10 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+{{ with .error }}
+	<h2 class="alert-error">Error : {{ . }}</h2>
+{{ end }}
+<p>Sections : {{ .sections }}</p>
+<pre>Data : {{ .data }}</pre>
+
+{{template "footer.html" .}}
